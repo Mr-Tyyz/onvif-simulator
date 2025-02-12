@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^some-url-pattern/$', views.some_view, name='some_view'),
+    path('hello/', views.some_view, name='some_view'),
+    re_path(r'^camera/(?P<pk>\d+)/$', views.camera_view, name='camera_view'),
 ]
